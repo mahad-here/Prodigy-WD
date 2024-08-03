@@ -1,150 +1,88 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #282c34;
+  color: rgb(251, 247, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #20232a;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+h1 {
+  margin: 0;
+  color: #f9f9f9;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 1em;
+.stopwatch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.stopwatch {
+  background-color: #20232a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+#display {
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
-.home {
-    background: url('background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    position: relative;
+.controls {
+  margin-bottom: 20px;
 }
 
-.home .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2em;
-    border-radius: 10px;
+button {
+  font-size: 1em;
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #21a1f1;
+  border: none;
+  border-radius: 5px;
+  color: #20232a;
+  transition: background-color 0.3s ease;
 }
 
-.profile-photo {
-    margin-top: 1em;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+button:hover {
+  background-color: #61dafb;
 }
 
-.about, .projects, .contact {
-    padding: 2em;
-    text-align: center;
-    margin-top: 5em;
+button:disabled {
+  background-color: #aba7a7;
+  cursor: not-allowed;
 }
 
-.about h2, .projects h2, .contact h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
+#laps {
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-.about p {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.projects .project {
-    background: white;
-    border-radius: 10px;
-    padding: 1em;
-    margin: 1em 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.projects .project h3 {
-    font-size: 1.5em;
-}
-
-.projects .project p {
-    font-size: 1.1em;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    margin: 0 auto;
-    background: white;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact form label {
-    margin-top: 1em;
-    font-weight: bold;
-    font-size: 1.1em;
-    align-self: flex-start;
-}
-
-.contact form input, .contact form textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-top: 0.5em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.contact form button {
-    margin-top: 1em;
-    padding: 0.5em 2em;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-}
-
-.contact form button:hover {
-    background-color: #555;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 2em;
+#laps li {
+  font-size: 1.2em;
+  margin: 5px 0;
+  background-color: #282c34;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
